@@ -1,0 +1,14 @@
+services:
+  db:
+    build: .
+    image: mikrorm-discussion-6659/postgres-db
+    container_name: mikrorm-discussion-6659-postgres-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: testdb
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+volumes:
+  postgres-db:

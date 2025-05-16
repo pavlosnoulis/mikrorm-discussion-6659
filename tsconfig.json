@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "module": "NodeNext",
     "target": "ESNext",
-    "strict": true,
-    "outDir": "dist",
+    "moduleResolution": "NodeNext",
     "declaration": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true
+    "emitDecoratorMetadata": true
   },
-  "include": [
-    "./src/**/*.ts"
-  ],
+  "exclude": ["node_modules", "dist"],
   "ts-node": {
     "esm": true,
     "transpileOnly": true
